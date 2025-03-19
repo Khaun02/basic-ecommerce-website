@@ -139,3 +139,61 @@ header .row {
     margin: auto;
     padding: 0 25px;
 }
+
+/* featured products */
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    /* for the moving part of hover */
+    transition: transform 0.5s;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 80px; /* 80 px of space on bottom */
+
+    /* Setting the parent element (.title) to position: relative establishes a positioning context, ensuring the pseudo-element is placed relative to .title rather than the entire webpage.*/
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+/* bottom line after title */
+/* ::after is pseudo-element, add in extra element through CSS */
+.title::after {
+    content: '';                /* Important: Without content, the pseudo-element won't display. */
+    background: #ff523b;      /* Sets the background color of the line (red color). */
+    width: 80px;                /* Creates the size of the line (80 pixels wide, 5 pixels high). */
+    height: 5px;
+    border-radius: 5px;         /* Gives the edges of the line a nice rounded shape. */
+    position: absolute;         /* Allows precise placement relative to the closest positioned parent element (position: relative on parent). */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4 {
+    color: #555;
+    font-weight: normal;
+}
+
+.col-4 p {
+    font-size: 14px;
+
+}
+
+/* different color for star icons */
+.rating {
+    color: #ff523b;
+}
+
+/* essentially when you hover over the columns, will move the column up 5 pxs */
+.col-4:hover {
+    transform: translateY(-5px);
+}
