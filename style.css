@@ -41,8 +41,49 @@ p {
 }
 
 .container {
+    /* sets the width of the container to be only 1500px */
     max-width: 1500px;
+    /* makes the container in the center of the page */
     margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+    /* adds in padding only on the left and right by 25 more pixels */
+    padding: 0 25px;
+}
+
+/* this whole section until h1 i don't understand how it works */
+/* esp flex-basis... */
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+/* increases font size, makes some height between each line, then margin for top and bottom only */
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+
+header {
+    background: radial-gradient(#fff,#ffd6d6);
 }
