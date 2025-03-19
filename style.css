@@ -52,17 +52,33 @@ p {
 /* this whole section until h1 i don't understand how it works */
 /* esp flex-basis... */
 .row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: flex;                  /* places child elements side by side */
+    align-items: center;            /* center item vertically */
+    flex-wrap: wrap;                /* allow column to wrap on smaller screens */
+    justify-content: space-around;  /* evenly spaces column horizontally */
 }
 
+/* 
+flex-basis: 50%;
+Means each .col-2 tries to take up 50% width of the parent container (.row). With two .col-2 divs, each takes half the width, placing them side-by-side.
+
+min-width: 300px;
+Ensures columns never shrink below 300px. If the screen size becomes smaller, the columns will wrap vertically because of flex-wrap: wrap. 
+*/
 .col-2 {
     flex-basis: 50%;
     min-width: 300px;
 }
 
+/* 
+max-width: 100%;
+Ensures the image never overflows its parent. The image width automatically scales down proportionally to fit within .col-2.
+
+-
+
+padding: 50px 0;
+Adds spacing above and below the image.
+*/
 .col-2 img {
     max-width: 100%;
     padding: 50px 0;
