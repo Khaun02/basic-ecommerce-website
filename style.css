@@ -1,0 +1,6 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* the box sizing will incluide border/padding inside the width you give it instead of adding on to it */
+    box-sizing: border-box;
+}
