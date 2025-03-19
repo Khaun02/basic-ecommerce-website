@@ -4,3 +4,45 @@
     /* the box sizing will incluide border/padding inside the width you give it instead of adding on to it */
     box-sizing: border-box;
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    /* flex means how much it will grow/shrink in its container */
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    /* instead of it being block, its only takes up as much space as the ul */
+    /* positioning flow of inline elements while retaining the box-model features of block elements. This is commonly used to place items side by side without forcing line breaks (like a block element would) and without them being fully inline (so you can use margins, padding, widths, etc.). */
+    display: inline-block;
+    /* no * for the bullet points */
+    list-style: none;
+}
+
+/* targetting li inside ul inside nav's  */
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+p {
+    color: #555;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
